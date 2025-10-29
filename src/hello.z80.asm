@@ -29,8 +29,9 @@ Execute:
 ; Halt program execution. Change to "ret" to return to MSX-BASIC.
  
 Finished:
-	jr	Finished	; Jump to itself endlessly.
- 
+;	jr	Finished	; Jump to itself endlessly.
+	ret
+	
 Print:
 	ld	a,(hl)		; Load the byte from memory at address indicated by HL to A.
 	and	a		; Same as CP 0 but faster.
